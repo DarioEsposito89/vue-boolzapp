@@ -117,5 +117,8 @@ li{
     justify-content: flex-start;
 }
 
-
+.message.sent{
+    background-color: var(--sent);
+    align-self: flex-end;
+}
 
