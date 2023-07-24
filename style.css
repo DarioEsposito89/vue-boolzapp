@@ -1,4 +1,4 @@
-:root{
+:root {
     --active: rgba(233, 235, 235, 1);
     --icons: rgba(107, 115, 118, 1);
     --greybar: rgba(234, 234, 234, 1);
@@ -8,20 +8,20 @@
 }
 
 /* Images */
-img{
+img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-ul{
+ul {
     display: flex;
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
 }
 
-li{
+li {
     line-height: 50px;
     cursor: pointer;
 }
@@ -33,73 +33,73 @@ li{
     font-size: 18px;
 }
 
-.icon:hover{
+.icon:hover {
     color: #CDC1C5;
 }
 
-.icon-blue{
+.icon-blue {
     color: rgb(255, 255, 255);
     cursor: pointer;
     font-size: 18px;
 }
 
 /* Main Container */
-#app{
+#app {
     height: 100vh;
     width: 100%;
     background: linear-gradient(0deg, rgba(210,219,220,1) 0%, rgba(221,219,210,1) 85%, rgba(0,149,135,1) 85%, rgba(0,149,136,1) 100%);
 }
 
-#app > .container{
+#app > .container {
     height: 90%;
 }
 
-.border-lightgrey{
+.border-lightgrey {
     border: 1px solid grey;
+    background-color: white;
 }
 
 /* Left container */
 .contact-bar,
 .user-tools, 
 .header-left,
-.header-right{
+.header-right {
     background-color: var(--greybar);
     height: 70px;
 }
 
 /* Notificacion Section */
-.notification-wrapper{
+.notification-wrapper {
     background-color: var(--lightblue);
     height: 70px;
 }
 
 /* Search Section */
-.searchbar{
+.searchbar {
     height: 50px;
 }
 
 /* Conversation Container */
-.contacts-wrapper{
+.contacts-wrapper {
     height: calc(100% - 200px);
     overflow: hidden;
-    background-color: white;
 }
 
 /* Right Container */
 .contacts,
-.chat{
+.chat {
     height: 100%;
     overflow-y: auto;
 }
 
 /* Chat Section */
-.message-wrapper{
+.message-wrapper {
     height: calc(100% - 140px);
     background: url(img/mine.jpg);
     overflow: hidden;
 }
 
-.message{
+.message {
     position: relative;
     min-width: 40%;
     max-width: 60%;
@@ -110,14 +110,14 @@ li{
     border-radius: 10px;
 }
 
-.chat{
+.chat {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-.message.sent{
+.message.sent {
     background-color: var(--sent);
     align-self: flex-end;
 }
