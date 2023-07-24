@@ -85,3 +85,17 @@ li{
     background-color: white;
 }
 
+/* Right Container */
+.contacts,
+.chat{
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Chat Section */
+.message-wrapper{
+    height: calc(100% - 140px);
+    background: url(../img/mine.jpg);
+    overflow: hidden;
+}
+
