@@ -14,6 +14,18 @@ img{
     border-radius: 50%;
 }
 
+ul{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+li{
+    line-height: 50px;
+    cursor: pointer;
+}
+
 /* Icon */
 .icon {
     color: var(--icons);
@@ -46,7 +58,7 @@ img{
     border: 1px solid grey;
 }
 
-/* Left Section */
+/* Left container */
 .contact-bar,
 .user-tools, 
 .header-left,
@@ -65,3 +77,11 @@ img{
 .searchbar{
     height: 50px;
 }
+
+/* Conversation Container */
+.contacts-wrapper{
+    height: calc(100% - 200px);
+    overflow: hidden;
+    background-color: white;
+}
+
