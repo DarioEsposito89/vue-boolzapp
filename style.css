@@ -60,3 +60,8 @@ img{
     background-color: var(--lightblue);
     height: 70px;
 }
+
+/* Search Section */
+.searchbar{
+    height: 50px;
+}
