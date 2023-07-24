@@ -95,7 +95,27 @@ li{
 /* Chat Section */
 .message-wrapper{
     height: calc(100% - 140px);
-    background: url(../img/mine.jpg);
+    background: url(img/mine.jpg);
     overflow: hidden;
 }
+
+.message{
+    position: relative;
+    min-width: 40%;
+    max-width: 60%;
+    font-size: 15px;
+    margin: 5px 0px;
+    padding: 15px 15px 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.chat{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
 
