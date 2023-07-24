@@ -25,6 +25,12 @@ img{
     color: #CDC1C5;
 }
 
+.icon-blue{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 18px;
+}
+
 /* Main Container */
 #app{
     height: 100vh;
@@ -46,5 +52,11 @@ img{
 .header-left,
 .header-right{
     background-color: var(--greybar);
+    height: 70px;
+}
+
+/* Notificacion Section */
+.notification-wrapper{
+    background-color: var(--lightblue);
     height: 70px;
 }
