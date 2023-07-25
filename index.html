@@ -62,10 +62,12 @@
                         <div class="contacts">
                             <div class="contact">
                                 <ul>
-                                    <li>
-                                        <img src="img/avatar_2.jpg" alt="Avatar"/>
-                                        <span class="fw-bold">Fabio</span>
-                                        <span>bla bla bla</span>
+                                    <!-- METHODS JAVASCRIPT "getAvatar", print array -->
+                                    <li v-for="(contact, index) in contacts" @click="setCurrentContact(index)">
+                                        <img class="avatars-img" :src="getAvatar(contact)" alt="Avatar" />
+                                        <span class="fw-bold">{{ contact.name }}</span>
+                                        <span> {{ contact.messages[contact.messages.length - 1].date }}</span>
+
                                     </li>
                                 </ul>
                             </div>

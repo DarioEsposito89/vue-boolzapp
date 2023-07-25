@@ -34,6 +34,8 @@
 // ● I pulsanti e le icone possono non funzionare (a parte l’invio del messaggio)
 // ● Per gestire le date, può essere utile la libreria Luxon
 
+const { createApp } = Vue;
+
 createApp({
     data() {
         return {
@@ -129,11 +131,11 @@ createApp({
         }
     },
     methods: {
-        
-    },
-    
-    mounted() {
-
-    },
+        // Stampa array contatti con v-for
+        getAvatar(contact) {
+            return `img/avatar${contact.avatar}.jpg`;
+        },
+    }
 }).mount('#app');
+
 
