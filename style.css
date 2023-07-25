@@ -82,7 +82,8 @@ li {
 /* Conversation Container */
 .contacts-wrapper {
     height: calc(100% - 200px);
-    overflow: hidden;
+    overflow: auto;
+    flex-grow: 1;
 }
 
 /* Right Container */
