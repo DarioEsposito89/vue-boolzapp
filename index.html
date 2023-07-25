@@ -25,7 +25,7 @@
                     <div class="header-left d-flex align-items-center">
                         <!-- User section -->
                         <div class="contact-bar d-flex flex-grow-1 p-2 align-items-center">
-                            <img src="./img/avatar_io.jpg" alt="">
+                            <img class="me-2" src="./img/avatar_io.jpg" alt="">
                             <span class="fw-bold">Sofia</span>
                         </div>
 
@@ -60,13 +60,20 @@
                     <!-- Conversations container -->
                     <div class="contacts-wrapper">
                         <div class="contacts">
-                            <div class="contact">
+                            <div class="contact d-flex">
                                 <ul>
-                                    <!-- METHODS JAVASCRIPT "getAvatar", print array -->
-                                    <li v-for="(contact, index) in contacts" @click="setCurrentContact(index)">
-                                        <img class="avatars-img" :src="getAvatar(contact)" alt="Avatar" />
-                                        <span class="fw-bold">{{ contact.name }}</span>
-                                        <span> {{ contact.messages[contact.messages.length - 1].date }}</span>
+                                    <!-- print array contacts and get new avatar with v-for -->
+                                    <li class="d-flex mb-3" v-for="(contact, index) in contacts" @click="setCurrentContact(index)">
+                                        <div>
+                                            <img class="avatars-img me-2" :src="getAvatar(contact)" alt="Avatar" />
+                                        </div>
+                                        
+                                        <div class="flex-grow-1">
+                                            <div class="fw-bold">{{ contact.name }}</div> 
+                                            <small>Ultimo messaggio inviato</small>
+                                        </div>
+                                        
+                                        <div> {{ contact.messages[contact.messages.length - 1].date }}</div>
 
                                     </li>
                                 </ul>
