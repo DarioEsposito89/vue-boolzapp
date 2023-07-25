@@ -89,13 +89,11 @@
                     <div class="header-left d-flex align-items-center">
                         <!-- Contact user section -->
                         <div class="contact-bar d-flex flex-grow-1 align-items-center">
-                            <div>
-                                <img src="img/avatar_2.jpg" alt="" />
-                            </div>
-                            <div class="mx-2">
-                                <strong>dhnkbkbi</strong><br>
-                                ultimo accesso: 21/10/
-                            </div> 
+                            <!-- METHODS JAVASCRIPT "setCurrentContact" -->
+                            <img class="avatars-img" :src="`img/avatar${contacts[currentChat].avatar}.jpg`" alt="" />
+                            <span><strong>{{contacts[currentChat].name}}</strong><br />
+                                Ultimo accesso: {{contacts[currentChat].messages[contacts[currentChat].messages.length -
+                                1].date }}</span>
                         </div>
 
                         <!-- Contact user tools -->

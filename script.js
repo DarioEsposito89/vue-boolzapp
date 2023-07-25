@@ -135,6 +135,10 @@ createApp({
         getAvatar(contact) {
             return `img/avatar${contact.avatar}.jpg`;
         },
+        //Set current contact chat
+        setCurrentContact(index) {
+            this.currentChat = index;
+        },
     }
 }).mount('#app');
 
