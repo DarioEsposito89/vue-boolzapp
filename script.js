@@ -220,8 +220,7 @@ createApp({
         },
         //send message
         sendMessage() {
-            const d = new Date();
-            let newdate = d.toDateString();
+            let newdate = new Intl.DateTimeFormat('en-GB', {dateStyle: 'short', timeStyle: 'medium'}).format(new Date)
             const newmSentMessage = {
                 date: newdate,
                 message: this.newmessage,
@@ -231,8 +230,7 @@ createApp({
             this.contacts[this.currentChat].messages.push(newmSentMessage);
             //automatic answer
             setTimeout(() => {
-                const d = new Date();
-                let newdate = d.toDateString();
+                let newdate = new Intl.DateTimeFormat('en-GB', {dateStyle: 'short', timeStyle: 'medium'}).format(new Date)
                 const newmSentMessage = {
                     date: newdate,
                     message: 'ok',
