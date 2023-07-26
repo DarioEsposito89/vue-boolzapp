@@ -218,17 +218,6 @@ createApp({
         setCurrentContact(index) {
             this.currentChat = index;
         },
-        //Send message
-        sendMessage() {
-            const d = new Date();
-            let newdate = d.toDateString();
-            const newmSentMessage = {
-                date: newdate,
-                message: this.newmessage,
-                status: 'sent'
-            }
-            this.contacts[this.currentChat].messages.push(newmSentMessage);
-        },
         //send message
         sendMessage() {
             const d = new Date();
