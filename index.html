@@ -54,7 +54,9 @@
                     <!-- Search section -->
                     <div class="searchbar d-flex bg-light align-items-center">
                         <a href="#"><i class="fas fa-search mx-3 my-2 icon"></i></a>
-                        <input type="text" class="input-group border-1 rounded border-secondary-subtle me-2" placeholder="Cerca o inizia una nuova chat"/>
+                        <!-- Filter -->
+                        <input type="text" class="input-group border-1 rounded border-secondary-subtle me-2" placeholder="Cerca o inizia una nuova chat"
+                        v-model.trim="filterContact" @keyup="findContact"/>
                     </div>
 
                     <!-- Conversations container -->
@@ -63,7 +65,7 @@
                             <div class="contact d-flex">
                                 <ul>
                                     <!-- print array contacts and get new avatar with v-for -->
-                                    <li class="d-flex mb-3" v-for="(contact, index) in contacts" @click="setCurrentContact(index)">
+                                    <li class="d-flex px-2 mb-3" v-for="(contact, index) in contacts" @click="setCurrentContact(index)">
                                         <div>
                                             <img class="avatars-img me-2" :src="getAvatar(contact)" alt="Avatar" />
                                         </div>
@@ -89,8 +91,8 @@
                     <div class="header-left d-flex align-items-center">
                         <!-- Contact user section -->
                         <div class="contact-bar d-flex flex-grow-1 align-items-center">
-                            <!-- METHODS JAVASCRIPT "setCurrentContact" -->
-                            <img class="avatars-img" :src="`img/avatar${contacts[currentChat].avatar}.jpg`" alt="" />
+                            <!-- Current chat conversation -->
+                            <img class="avatars-img mx-2" :src="`img/avatar${contacts[currentChat].avatar}.jpg`" alt="" />
                             <span><strong>{{contacts[currentChat].name}}</strong><br />
                                 Ultimo accesso: {{contacts[currentChat].messages[contacts[currentChat].messages.length -
                                 1].date }}</span>

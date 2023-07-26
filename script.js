@@ -239,6 +239,21 @@ createApp({
                 this.contacts[this.currentChat].messages.push(newmSentMessage);
             }, 1000);
         },
+        //filter
+        findContact() {
+            this.contacts = this.contacts.filter((contactObj) => {
+                let nameContact = contactObj.name.toLowerCase();
+                return contactObj.name.includes(this.filterContact.toLowerCase())
+            })
+        },
+    },
+    computed: {
+        filteredContact() {
+            return this.contacts.filter((contactObj) => {
+                let nameContact = contactObj.name.toLowerCase();
+                return contactObj.name.includes(this.filterContact.toLowerCase())
+            })
+        }
     },
 }).mount('#app');
 
