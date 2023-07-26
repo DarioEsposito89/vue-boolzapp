@@ -210,7 +210,7 @@ createApp({
         }
     },
     methods: {
-        // Stampa array contatti con v-for
+        // Print array contact with v-for
         getAvatar(contact) {
             return `img/avatar${contact.avatar}.jpg`;
         },
